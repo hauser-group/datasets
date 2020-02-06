@@ -6,7 +6,7 @@ method and the STO-3G basis set. All molecules are uncharged and in a singlet
 state.
 
 ## Results
-Number of ab-initio evaluations. (Not the same as optimization cycles!)
+Number of ab-initio evaluations (including the the first, therefore not the same as optimization cycles!)
 
 | ID | Name                      | (1) |
 |----|---------------------------|:---:|
@@ -34,8 +34,8 @@ Number of ab-initio evaluations. (Not the same as optimization cycles!)
 | 22 | ACANIL01                  | 53  |
 | 23 | Benzidine                 | 34  |
 | 24 | Pterin                    | 45  |
-| 25 | Difuropyrazine            | -   |
-| 26 | Mesityl-oxide             | -   |
+| 25 | Difuropyrazine            | 31  |
+| 26 | Mesityl-oxide             | 42  |
 | 27 | Histidine                 | -   |
 | 28 | Dimethylpentane           | -   |
 | 29 | Caffeine                  | -   |
