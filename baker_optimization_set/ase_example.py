@@ -27,14 +27,16 @@ class EvalCountingCalculator(Calculator):
             self.n_evals += 1
         self.results = dict(zip(properties, results))
 
+sum_evals = 0
+prefix = 'BFGS_LS'
 # Write header for the results file
-with open('BFGS_LS_results.txt', 'w') as fout:
+with open('%s_results.txt' % prefix, 'w') as fout:
     fout.write('id  evaluations\n')
 # Loop over all molecules in the bechmark set
 for i in range(1, 31):
     atoms = read('%02d.xyz' % i)
-    calc = QChem(label='calculations/mol_%02d' % i,
-                     scratch='calculations/scratch',
+    calc = QChem(label='calculations/%s/mol_%02d' % (prefix, i),
+                     scratch='calculations/%s/scratch' % prefix,
                      nt=4,
                      jobtype='force',
                      method='HF',
@@ -53,5 +55,8 @@ for i in range(1, 31):
     opt = BFGSLineSearch(atoms)
     opt.run(fmax=0.01)
     # Append to the results file
-    with open('BFGS_LS_results.txt', 'a') as fout:
+    with open('%s_results.txt' % prefix, 'a') as fout:
         fout.write('%2d    % 3d\n' % (i, atoms.calc.n_evals))
+    sum_evals += atoms.calc.n_evals
+with open('%s_results.txt' % prefix, 'a') as fout:
+    fout.write('sum   % 3d\n' % sum_evals)

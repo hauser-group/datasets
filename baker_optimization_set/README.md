@@ -36,11 +36,11 @@ Number of ab-initio evaluations (including the the first, therefore not the same
 | 24 | Pterin                    | 45  |
 | 25 | Difuropyrazine            | 31  |
 | 26 | Mesityl-oxide             | 42  |
-| 27 | Histidine                 | -   |
-| 28 | Dimethylpentane           | -   |
-| 29 | Caffeine                  | -   |
-| 30 | Menthone                  | -   |
-|    | Sum                       |     |
+| 27 | Histidine                 | 88  |
+| 28 | Dimethylpentane           | 47  |
+| 29 | Caffeine                  | 63  |
+| 30 | Menthone                  | 104 |
+|    | Sum                       | 906 |
 
 (1) ASE (3.19.0b1) `BFGSLineSearch(maxstep=.2, c1=0.23, c2=0.46, alpha=10.0, stpmax=50.0)`
 
